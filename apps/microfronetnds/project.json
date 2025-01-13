@@ -8,7 +8,13 @@
   "targets": {
     "build": {
       "executor": "@angular-architects/native-federation:build",
-      "options": {},
+      "options": {
+        "styles": [
+          "apps/microfronetnds/src/styles/theme-colors.scss",
+          "apps/microfronetnds/src/styles/custom-theme.scss"
+        ],
+        "main": "apps/microfronetnds/src/main.ts"
+      },
       "configurations": {
         "production": {
           "target": "microfronetnds:esbuild:production"

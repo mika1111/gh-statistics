@@ -1,15 +1,15 @@
 import { Route } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/native-federation';
+import {NavComponent} from "./nav/nav.component";
 
 export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    loadComponent: () =>
-      loadRemoteModule('statistics', './Component').then((m) => m.AppComponent),
+    component: NavComponent
   },
   {
-    path: 'statistics',
+    path: 'frosthaven',
     loadComponent: () =>
       loadRemoteModule('statistics', './Component').then((m) => m.AppComponent),
   },
